@@ -23,7 +23,8 @@ upstream    https://github.com/nullfull/isnamyang (fetch)
 upstream    https://github.com/nullfull/isnamyang (push)
 ```
 
-## 4. 추가한 upstream 저장소를 `fetch`한다. Fetch는 pull과 다르게 변경 내역을 자동으로 merge하지 않는다.
+## 4. 추가한 upstream 저장소를 `fetch`한다. 
+Fetch는 pull과 다르게 변경 내역을 자동으로 merge하지 않는다.
 ```
 ❯ git fetch upstream
 remote: Enumerating objects: 21, done.
