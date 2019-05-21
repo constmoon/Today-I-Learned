@@ -1,7 +1,7 @@
 # Fork한 로컬 저장소를 원격 저장소(Original Repository)와 동기화하는 방법
 내 계정에 Fork한 저장소(Repository)에서 작업하고 있는데, 원격 저장소(Original Repository)에 업데이트(새로운 commit)가 생겼을 때 변경 내역을 추가하는 방법을 알아본다.
 
-## 1. `git remote -v`로 현재 로컬 저장소의 remote 정보를 확인한다.
+## 1. 현재 로컬 저장소의 remote 정보를 확인한다.
 ```
 ❯ git remote -v
 origin    https://github.com/constmoon/isnamyang (fetch)
