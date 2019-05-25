@@ -17,11 +17,11 @@ Vuex에 선언한 속성들을 뷰 컴포넌트에서 더 쉽게 불러올 수 �
 import { mapActions } from "vuex"
 
 export default {
-computed: {
-...mapGetters(['uid'])
-},
-methods: {
-...mapActions(['fetchPosts'])
-}
+  computed: {
+  ...mapGetters(['uid'])
+  },
+  methods: {
+  ...mapActions(['fetchPosts'])
+  }
 }
 ```
