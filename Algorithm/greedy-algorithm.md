@@ -23,16 +23,16 @@
 ### Pseudocode
 ```
 GreedyAlgorithm(Input){
-for(each e in Input){
-s = SelectionFunction(e)
-if( FeasibilityFunction(s) ){
-Solution <- s
-if( SolutionFunction(Solution){
-return Solution;
-}
-}
-}
-return Solution;
+    for(each e in Input){
+        s = SelectionFunction(e)
+        if( FeasibilityFunction(s) ){
+            Solution <- s
+            if( SolutionFunction(Solution){
+                return Solution;
+            }
+        }
+    }
+    return Solution;
 }
 ```
 
@@ -49,15 +49,15 @@ return Solution;
 
 ```
 GreedyAlgorithm_FractionalKnapsack(capacity, items){
-Sort_items(items)
-for(each e in items){
-s = SelectionFunction(e)
-Solution <- s
-if(SolutionFunction(Solution){
-return Solution;
-}
-}
-return Solution;
+    Sort_items(items)
+    for(each e in items){
+        s = SelectionFunction(e)
+        Solution <- s
+        if(SolutionFunction(Solution){
+            return Solution;
+        }
+    }
+    return Solution;
 }
 ```
 Fractional knapsack의 경우 (가격/무게) 비율이 큰 순서대로 먼저 정렬한다는 게 가장 중요하다.
