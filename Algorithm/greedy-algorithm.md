@@ -27,7 +27,7 @@ GreedyAlgorithm(Input){
         s = SelectionFunction(e)
         if( FeasibilityFunction(s) ){
             Solution <- s
-            if( SolutionFunction(Solution){
+            if( SolutionFunction(Solution) ){
                 return Solution;
             }
         }
@@ -54,7 +54,7 @@ GreedyAlgorithm_FractionalKnapsack(capacity, items){
     for(each e in items){
         s = SelectionFunction(e)
         Solution <- s
-        if(SolutionFunction(Solution){
+        if( SolutionFunction(Solution) ){
             return Solution;
         }
     }
