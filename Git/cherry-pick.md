@@ -8,4 +8,4 @@
 git cherry-pick COMMIT_ID
 ```
 
-cherry-pick은 commit을 가져오는 게 아니라, 가져올 commit을 새로 만들어서 현재 브랜치에 덧붙이는 작업이다. 즉, 브랜치에 붙는 commit의 id가 달라진다.
+cherry-pick은 commit을 가져오는 게 아니라, 가져올 commit을 새로 만들어서 현재 브랜치에 덧붙이는 작업이다. 즉, 브랜치에 붙는 commit의 id는 달라진다.
