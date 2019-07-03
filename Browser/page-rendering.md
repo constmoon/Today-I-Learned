@@ -1,6 +1,6 @@
 ### 브라우저에서 페이지가 렌더링되는 과정
 
-![page-rendering](./img/page_rendering.png)   
+![page_rendering](./img/page_rendering.png)   
 
 1. http코드가 서버로부터 전달이 되면, 브라우저는 청크 단위로 읽어서 파싱한다. 
 2. 이를 바탕으로 DOM을 생성한다.
