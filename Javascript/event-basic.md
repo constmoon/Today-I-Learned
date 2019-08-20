@@ -7,7 +7,7 @@
 - 사용자의 입력에 따라 추가적인 동작을 구현해야할 때 **이벤트를 등록한다**고 한다. 
 
 ## 이벤트 리스너(event listener)
-- 이벤트 리스너란 이벤트가 발생했을 때 그 처리를 담당하는 함수를 가리키며, 이벤트 핸들러(event handler)라고도 한다.
+이벤트 리스너란 이벤트가 발생했을 때 그 처리를 담당하는 함수를 가리키며, 이벤트 핸들러(event handler)라고도 한다.
 - 지정된 타입의 이벤트가 특정 엘리먼트에서 발생하면, 브라우저는 그 요소에 등록된 이벤트 리스너를 실행시킨다.
 - 작성된 이벤트 리스너는 먼저 해당 객체나 엘리먼트에 등록되어야만 호출될 수 있다.
 
@@ -65,10 +65,10 @@ currentTarget는 jQuery의 this과 같다. 즉, event를 발생기킨 element의
 ```html
 <ul id="todolist">
         <li>
-                <input type="checkbox"">
+                <input type="checkbox">
                 <span>할 일</span>
         </li>
-</ul> 
+</ul>
 <script>
 // 기존의 방법: input 개수마다 이벤트를 붙인다
 var inputList = document.querySelectorAll('li input');
@@ -132,13 +132,13 @@ window.addEventListener('load', function(){ .. } );
 ```
 
 `load`  
-* load: html의 모든 리소스들이 다운로드된 후에(돔이 완성되면) 발생하는 이벤트  
+* load: html의 모든 리소스들이 다운로드된 후에(DOM이 완성되면) 발생하는 이벤트  
 * 그러나 리소스가 많은 사이트의 경우, 사이트를 로딩하는 과정에서 이벤트에 대한 결과를 볼 수 없음
 
 `DOMContentLoaded`  
 * DOM이 로딩되었을 때 이벤트 접근 가능(이미지 등 무거운 리소스들을 기다릴 필요가 X)
 
-DomContentLoaded는 항상 사용하는 게 아님. loaded된 리소스들에 대해 접근이 필요할 땐 load를 사용해야한다(e.g. 스크립트로 이미지 사이즈를 늘리고 줄이는 등)
+DomContentLoaded를 항상 사용하는 건 아니다. loaded된 리소스들에 대해 접근이 필요할 때는 load를 사용해야한다(e.g. 스크립트로 이미지 사이즈를 늘리고 줄이는 등)
 
 
 **바인딩과 할당?**
