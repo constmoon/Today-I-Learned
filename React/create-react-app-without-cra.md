@@ -112,15 +112,15 @@ module.exports = {
 
 ## Babel
 
-React 컴포넌트들은 JavaScript ES6+ 문법과 JSX 문법으로 작성된다. 이 코드를 그대로 쓰는 경우 지원하지 않는 브라우저에서는 코드가 동작하지 않으므로 Babel을 사용하여 변환을 해줘야 한다.
+React 컴포넌트들은 ES6 이상의 자바스크립트 문법과 JSX 문법으로 작성된다. 이 코드를 그대로 쓰는 경우 지원하지 않는 브라우저에서는 코드가 동작하지 않으므로 Babel을 사용하여 변환을 해줘야 한다.
 
 ```shell
 $ yarn add -D @babel/core babel-loader @babel/preset-env @babel/preset-react
 ```
 
-- @babel/core : babel 사용을 위한 코어 라이브러리
-- babel-loader : Webpack을 사용할 때 babel을 적용하기 위한 라이브러리
-- @babel/preset-env : JavaScript ES6 코드를 ES5로 변환해주는 라이브러리
+- @babel/core : Babel 사용을 위한 코어 라이브러리
+- babel-loader : Webpack을 사용할 때 Babel을 적용하기 위한 라이브러리
+- @babel/preset-env : JavaScript ES6+ 코드를 ES5로 변환해주는 라이브러리
 - @babel/preset-react : JSX 코드를 JavaScript 코드로 변환시켜 주는 라이브러리
 
  **`import 'React' from 'react'`를 하는 이유도 여기에 있다!**
@@ -464,15 +464,15 @@ GitHub 등 remote repository에 push 시에 업로드하지 않을 파일들을 
 
 ## 결론
 
-create-react-app 없이 리액트 프로젝트를 생성하기 전에 제일 궁금했던 부분은 `리액트 컴포넌트가 어떻게 웹 브라우저에서 작동하는지`였다. 분명 Webpack과 Babel을 사용하는 것 같은데, 왜 필요하고 어떻게 쓰이는 건지 제대로 알고 싶었다.
+create-react-app 없이 리액트 프로젝트를 생성하기 전에 제일 궁금했던 부분은 `리액트 컴포넌트가 어떻게 브라우저에서 작동하는지`였다. 분명 Webpack과 Babel을 사용하는 것 같은데, 왜 필요하고 어떻게 쓰이는 건지 제대로 알고 싶었다.
 
 정리하자면 여러 개의 자바스크립트 파일을 하나의 파일로 묶어 요청 수를 줄이고, 최신 자바스크립트 문법을 모든 브라우저에서 사용하기 위해 모듈 번들러를 사용한다. 모듈 번들러는 자바스크립트 코드를 압축하고 최적화 할 수 있기 때문에 로딩 속도를 높여준다.
 
-모듈 번들러 라이브러리인 Webpack은 모든 파일을 모듈로 관리한다. 하지만 Webpack은 자바스크립트 파일만 읽어 올 수 있기 때문에, 스타일시트나 이미지 등을 Webpack이 읽을 수 있는 자바스크립트로 변경해야 한다. Webpack이 이해 할 수 있는 모듈로 변경해 주는 게 loader의 역할이다.
+모듈 번들러 라이브러리인 Webpack은 모든 파일을 모듈로 관리한다. 하지만 Webpack은 자바스크립트 파일만 읽어 올 수 있기 때문에, 스타일시트나 이미지 등을 Webpack이 읽을 수 있는 자바스크립트로 변경해야 한다. Webpack이 인식할 수 있는 모듈로 변경해 주는 게 loader의 역할이다.
 
 Webpack은 로더(babel-loader, css-loader...)를 사용하여 여러 파일을 모듈로 변환한다. 이때 entry로 설정한 index.html부터 시작하여 모든 변환을 진행하고, 이들을 묶은(번들링한) 파일을 생성한다. 왜 개발자들이 `웹팩으로 만다`는 표현을 사용하는지  이해할 수 있었다. 
 
-Babel은 리액트의 JSX 문법 및 ES6+ 자바스크립트 문법이 오래된 버전의 브라우저에서도 동작할 수 있도록 ES5 버전의 자바스크립트 문법으로 변환해준다. Webpack은 babel-loader을 통해 Babel의 변환 기능을 사용하고, 변환 작업은 Babel이 지정한 preset을 이용하여 진행한다. 
+Babel은 리액트의 JSX 문법 및 ES6 이상의 자바스크립트 문법이 오래된 버전의 브라우저에서도 동작할 수 있도록 ES5 버전의 자바스크립트 문법으로 변환해준다. Webpack은 babel-loader을 통해 Babel의 변환 기능을 사용하고, 변환 작업은 Babel이 지정한 preset을 이용하여 진행한다. 
 
 이외에도 다양한 Webpack config option들이 있다. 다른 사람들은 어떤 경우에 어떤 플러그인들을 사용하는지 찾아보는 게 다음 질문이 될 것이다.
 
