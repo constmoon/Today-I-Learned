@@ -258,14 +258,12 @@ $ yarn add -D html-webpack-plugin clean-webpack-plugin
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
-  ...
   plugins: [
     new HtmlWebPackPlugin({
       template: "./public/index.html",
       filename: "index.html",
     }),
   ]
-  ...
 }
 ```
 
@@ -406,6 +404,36 @@ my-react-app
 ├─ package.json
 ├─ webpack.config.js
 └─ yarn.lock
+```
+
+```json
+{
+  "name": "my-react-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
 ```
 
 
