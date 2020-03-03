@@ -4,7 +4,7 @@ create-react-app 없이 리액트 프로젝트를 생성해보며 각 툴체인�
 
 
 
-### Package Manager
+## Package Manager
 
 프로젝트를 생성할 디렉토리를 만들고 package manager를 통해 프로젝트를 생성한다. 
 
@@ -27,7 +27,7 @@ $ yarn init -y
 
 
 
-### Module Bundler - Webpack
+## Module Bundler - Webpack
 
 모듈 번들러란 여러 개의 나누어져 있는 파일들을 하나의 파일로 만들어주는 라이브러리를 의미한다. Webpack은 그 중 하나이며, 자바스크립트, 스타일시트, 이미지 등을 모듈로 로딩하고 하나의 파일로 묶어주는 역할을 한다.
 
@@ -110,7 +110,7 @@ module.exports = {
 
 
 
-### Babel
+## Babel
 
 React 컴포넌트들은 JavaScript ES6+ 문법과 JSX 문법으로 작성된다. 이 코드를 그대로 쓰는 경우 지원하지 않는 브라우저에서는 코드가 동작하지 않으므로 Babel을 사용하여 변환을 해줘야 한다.
 
@@ -123,7 +123,7 @@ $ yarn add -D @babel/core babel-loader @babel/preset-env @babel/preset-react
 - @babel/preset-env : JavaScript ES6 코드를 ES5로 변환해주는 라이브러리
 - @babel/preset-react : JSX 코드를 JavaScript 코드로 변환시켜 주는 라이브러리
 
-##### `import 'React' from 'react'`를 하는 이유도 여기에 있다!
+ **`import 'React' from 'react'`를 하는 이유도 여기에 있다!**
 
 JSX 문법은 바벨의 [transform-react-jsx](https://babeljs.io/docs/en/babel-plugin-transform-react-jsx)에 의해서 변환이 된다. 여기서 `React.createElement()`로 변환이 되는데, 이때 React를 못 찾는 문제를 해결하기 위해 React도 import를 해야한다.
 
@@ -149,7 +149,7 @@ my-react-app
 
 
 
-### CSS 컴파일
+## CSS 컴파일
 
 Webpack을 통해 CSS를 컴파일하도록 아래 패키지를 설치한다.
 
@@ -163,7 +163,7 @@ $ yarn add -D css-loader style-loader mini-css-extract-plugin
 
 
 
-### Webpack - loader
+## Webpack - loader
 
 Webpack은 기본적으로 자바스크립트 파일만 인식하지만, 로더를 사용하면 [다른 타입의 파일도 모듈로 변환할 수 있다](https://webpack.js.org/concepts/modules). 
 
@@ -254,16 +254,18 @@ $ yarn add -D html-webpack-plugin clean-webpack-plugin
 
  설치 후 webpack.config.js 파일에 아래와 같이 html 관련 코드를 추가해준다.
 
-```json
+```js
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
+  ...
   plugins: [
     new HtmlWebPackPlugin({
       template: "./public/index.html",
       filename: "index.html",
     }),
   ]
+  ...
 }
 ```
 
@@ -271,8 +273,7 @@ module.exports = {
 * filename: 생성할 html 파일 이름
 
 
-
-### Creating React Components
+## Creating React Components
 
 React 라이브러리를 설치하고 컴포넌트를 생성한다.
 
@@ -351,7 +352,7 @@ export default App;
 
 
 
-### Live Dev Server 
+## Live Dev Server 
 
 이전까지는 소스코드를 수정할 때마다 빌드 명령어를 직접 입력하여 빌드파일을 생성했다. 이런 불편함을 없애기 위해 소스코드가 수정될 때마다 알아서 웹팩이 빌드해주는 webpack-dev-server가 있다. 
 
@@ -438,7 +439,7 @@ my-react-app
 
 
 
-### .gitignore
+## .gitignore
 
 GitHub 등 remote repository에 push 시에 업로드하지 않을 파일들을 명시한다.
 
@@ -461,7 +462,7 @@ GitHub 등 remote repository에 push 시에 업로드하지 않을 파일들을 
 
 
 
-### 결론
+## 결론
 
 create-react-app 없이 리액트 프로젝트를 생성하기 전에 제일 궁금했던 부분은 `리액트 컴포넌트가 어떻게 웹 브라우저에서 작동하는지`였다. 분명 Webpack과 Babel을 사용하는 것 같은데, 왜 필요하고 어떻게 쓰이는 건지 제대로 알고 싶었다.
 
