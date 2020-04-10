@@ -1,14 +1,14 @@
-## 숫자에 1000단위로 콤마 표시하기
+# 숫자에 1000단위로 콤마 표시하기
 
-### 문제
+## 문제
 
 요청수에 가독성을 높이기 위해 3자리 마다 콤마(,)를 표시하기
 
-### 해결
+## 해결
 
 정규식을 사용하여 표시한다. 슬래쉬(`/`)로 감싸는 정규식 리터럴을 사용하였다.
 
-#### 정규식 패턴 작성하기
+### 정규식 패턴 작성하기
 
 ![regex-pattern](./img/regex-pattern.png)
 
@@ -44,6 +44,6 @@ function numberWithCommas(x) {
 
 
 
-#### 정규식을 사용하지 않는다면?
+### 정규식을 사용하지 않는다면?
 
 * Number 메서드인 [toLocalString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)을 사용한다.
