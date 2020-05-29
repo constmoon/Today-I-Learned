@@ -48,14 +48,6 @@ $ yarn add -D webpack webpack-cli
 }
 ```
 
-설치가 완료되면 package.json 파일에 build 명령어를 추가한다.
-
-```json
-"scripts" : {
-  "build": "webpack"
-}
-```
-
 프로젝트 폴더에 `webpack.config.js` 파일을 생성하고 추가적인 설정을 해준다.
 
 ```
@@ -106,7 +98,7 @@ module.exports = {
 }
 ```
 
-터미널에서 `yarn build ` 를 하면 output 설정대로 build 디렉토리에 bundle.js가 생성되었음을 볼 수 있다.
+터미널에서 `yarn build` 를 하면 output 설정대로 build 디렉토리에 bundle.js가 생성되었음을 볼 수 있다.
 
 
 
